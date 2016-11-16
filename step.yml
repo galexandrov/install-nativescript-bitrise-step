@@ -1,0 +1,35 @@
+version: 0.0.1
+title: Install NativeScript
+summary: Installs the `nativescript` command line tools.
+description: Installs the [NativeScript CLI npm package](https://www.npmjs.com/package/nativescript).
+website: https://github.com/galexandrov/install-nativescript-bitrise-step
+source_code_url: https://github.com/galexandrov/install-nativescript-bitrise-step
+support_url: https://github.com/galexandrov/install-nativescript-bitrise-step/issues
+published_at: 2016-03-09T13:31:32.035939753+01:00
+source:
+  git: https://github.com/galexandrov/install-nativescript-bitrise-step.git
+host_os_tags:
+- osx-10.10
+project_type_tags:
+- nativescript
+type_tags:
+- nativescript
+deps:
+  brew:
+  - name: node
+inputs:
+- opts:
+    description: |-
+      Version of the `nativescript` package to install.
+      If not specified, the latest version will be selected.
+      Check the logs for the available versions from this
+      package and specify the desired verion as `2.4.0` for example.
+    title: Version of the `nativescript` package to install
+  version: null
+- npm_options: null
+  opts:
+    description: |-
+      Options are added to `npm install`. `-g` (global) option is set by default.
+      You can use multiple options, separated by a space
+      character, for example `-dd -ll`
+    title: Additional options when installing NativeScript CLI with `npm install`
